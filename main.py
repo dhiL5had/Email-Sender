@@ -51,6 +51,10 @@ class User_Selection:
         LINE_CLEAR = '\x1b[2K'
     
         email_receiver= input("\nEnter the recepient email-id: ")
+        while email_receiver == '':
+            print(LINE_UP, end=LINE_CLEAR)
+            email_receiver= input("\nPlease enter the recepient email-id: ")
+
         choice= input("\nDo you want to update the email-id? (yes/no) ").lower()
 
         while choice not in ["y","n","yes","no"]:
